@@ -182,10 +182,15 @@ def problem3(sequence):
       :rtype: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    count = 0
+    for k in range (len(sequence)):
+        if is_prime(sequence[k]) == True:
+            count = count + 1
+            sequence[k] = sequence[k] + 3
+    return count
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
