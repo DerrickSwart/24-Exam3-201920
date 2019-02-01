@@ -3,9 +3,9 @@ Exam 3, problem 1.
 
 Authors: Vibha Alangar, Aaron Wilkin, David Mutchler, Dave Fisher, 
          Matt Boutell, Amanda Stouder, their colleagues and 
-         PUT_YOUR_NAME_HERE.  January 2019.
+         Derrick Swart.  January 2019.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -126,7 +126,7 @@ def problem1(n):
       :rtype: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # **** IMPORTANT ****:
     # We supplied a   fibonacci   function above.
@@ -139,6 +139,25 @@ def problem1(n):
     # and THEN try the full-credit version.
     # As always, CONTINUE to the next problem if you are STUCK on this one.
     # -------------------------------------------------------------------------
+    x = 1
+    fib_prev1 = 0
+    fib_prev2 = 0
+    while True:
+        print('beginning   x:', x, 'Fib_prev1', fib_prev1, 'fib_prev2', fib_prev2)
+        fib_prev1 = fib_prev2
+        if x == 1:
+            fib_prev1 = 1
+        if x == 2:
+            fib_prev2 = 1
+        if x > 2:
+            fib_prev2 = fib
+        fib = fib_prev2 + fib_prev1
+        print('End         x:', x, 'Fib_prev1', fib_prev1, 'fib_prev2', fib_prev2, 'fib', fib)
+        if fib >= n:
+                break
+
+        x = x + 1
+    return fib_prev2
 
 
 ###############################################################################
